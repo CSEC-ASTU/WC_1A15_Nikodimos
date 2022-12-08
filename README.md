@@ -1,1 +1,2 @@
-# WC_1A15_Nikodimos
+# CSEC DEV WEEKLY CHALLENGE
+# Team Nikodimos

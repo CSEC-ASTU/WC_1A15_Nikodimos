@@ -218,113 +218,113 @@
   <link rel="stylesheet" href="allSurvey_files/theme.min.css">
   <link href="allSurvey_files/tiny-slider.css" rel="stylesheet">
   <title>Landing Course | Geeks - Bootstrap 5 Template </title>
-  
+
 </head>
 
 <body class="bg-white">
- <!-- Theme JS -->
- <script src="allSurvey_files/theme.min.js"></script>
- <style type="text/css" data-typed-js-css="true">
-   @font-face {
-     font-family: 'Material Icons';
-     font-style: normal;
-     font-weight: 400;
-     src: url(https://example.com/MaterialIcons-Regular.eot);
-     /* For IE6-8 */
-     src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-   }
+  <!-- Theme JS -->
+  <script src="allSurvey_files/theme.min.js"></script>
+  <style type="text/css" data-typed-js-css="true">
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://example.com/MaterialIcons-Regular.eot);
+      /* For IE6-8 */
+      src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+        url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+        url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+    }
 
-   .material-icons {
-     font-family: 'Material Icons';
-     font-weight: normal;
-     font-style: normal;
-     font-size: 24px;
-     /* Preferred icon size */
-     display: inline-block;
-     line-height: 1;
-     text-transform: none;
-     letter-spacing: normal;
-     word-wrap: normal;
-     white-space: nowrap;
-     direction: ltr;
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      /* Preferred icon size */
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
 
-     /* Support for all WebKit browsers. */
-     -webkit-font-smoothing: antialiased;
-     /* Support for Safari and Chrome. */
-     text-rendering: optimizeLegibility;
+      /* Support for all WebKit browsers. */
+      -webkit-font-smoothing: antialiased;
+      /* Support for Safari and Chrome. */
+      text-rendering: optimizeLegibility;
 
-     /* Support for Firefox. */
-     -moz-osx-font-smoothing: grayscale;
+      /* Support for Firefox. */
+      -moz-osx-font-smoothing: grayscale;
 
-     /* Support for IE. */
-     font-feature-settings: 'liga';
-   }
+      /* Support for IE. */
+      font-feature-settings: 'liga';
+    }
 
-   .typed-cursor {
-     opacity: 1;
-   }
+    .typed-cursor {
+      opacity: 1;
+    }
 
-   .typed-cursor.typed-cursor--blink {
-     animation: typedjsBlink 0.7s infinite;
-     -webkit-animation: typedjsBlink 0.7s infinite;
-     animation: typedjsBlink 0.7s infinite;
-   }
+    .typed-cursor.typed-cursor--blink {
+      animation: typedjsBlink 0.7s infinite;
+      -webkit-animation: typedjsBlink 0.7s infinite;
+      animation: typedjsBlink 0.7s infinite;
+    }
 
-   @keyframes typedjsBlink {
-     50% {
-       opacity: 0.0;
-     }
-   }
+    @keyframes typedjsBlink {
+      50% {
+        opacity: 0.0;
+      }
+    }
 
-   @-webkit-keyframes typedjsBlink {
-     0% {
-       opacity: 1;
-     }
+    @-webkit-keyframes typedjsBlink {
+      0% {
+        opacity: 1;
+      }
 
-     50% {
-       opacity: 0.0;
-     }
+      50% {
+        opacity: 0.0;
+      }
 
-     100% {
-       opacity: 1;
-     }
-   }
- </style>
- <style type="text/css" data-typed-js-css="true">
-   .typed-cursor {
-     opacity: 1;
-   }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <style type="text/css" data-typed-js-css="true">
+    .typed-cursor {
+      opacity: 1;
+    }
 
-   .typed-cursor.typed-cursor--blink {
-     animation: typedjsBlink 0.7s infinite;
-     -webkit-animation: typedjsBlink 0.7s infinite;
-     animation: typedjsBlink 0.7s infinite;
-   }
+    .typed-cursor.typed-cursor--blink {
+      animation: typedjsBlink 0.7s infinite;
+      -webkit-animation: typedjsBlink 0.7s infinite;
+      animation: typedjsBlink 0.7s infinite;
+    }
 
-   @keyframes typedjsBlink {
-     50% {
-       opacity: 0.0;
-     }
-   }
+    @keyframes typedjsBlink {
+      50% {
+        opacity: 0.0;
+      }
+    }
 
-   @-webkit-keyframes typedjsBlink {
-     0% {
-       opacity: 1;
-     }
+    @-webkit-keyframes typedjsBlink {
+      0% {
+        opacity: 1;
+      }
 
-     50% {
-       opacity: 0.0;
-     }
+      50% {
+        opacity: 0.0;
+      }
 
-     100% {
-       opacity: 1;
-     }
-   }
- </style>
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
   <!-- Navbar -->
   <!-- navbar login -->
   <nav class="navbar navbar-expand-lg navbar-default">
@@ -374,9 +374,20 @@
       </div>
       <!-- row -->
       <div class="row" id="surveyItems">
-       
-        
 
+
+        function deleteSurvey() {
+          alert("delete touched")
+          console.log("delete button touched")
+          remove(ref(db, "Survey/final"))
+            .then(() => {
+              alert("data deleted succesfully");
+              location.reload()
+            })
+            .catch((error) => {
+              alert("unsuccesfull storing : " + error)
+            })
+        }
         <!-- btn -->
         <div class="col-md-12 mt-3 text-center">
           <a href="#" class="btn btn-primary"> See All Surveys</a>
@@ -396,7 +407,7 @@
   <script src="allSurvey_files/simplebar.min.js"></script>
 
 
-  
+
 
 
 
@@ -431,12 +442,19 @@
 
     const db = getDatabase();
 
+    
+
     function GetAllData() {
       console.log("Getting all survey data ...")
       const dbref = ref(db)
 
+
+      
+
       get(child(dbref, "Survey"))
         .then((snapshot) => {
+
+          
 
           var surveyList = []
 
@@ -444,13 +462,13 @@
             surveyList.push(childSnapshot.val())
           })
 
-         let surveyTitle = []
+          let surveyTitle = []
 
           surveyList.forEach((list) => {
             list = JSON.parse(list)
             surveyTitle.push(list.title.trim())
-            
-          }) 
+
+          })
           console.log(surveyTitle)
 
           //render the element on browser
@@ -459,7 +477,7 @@
             console.log(value)
             let link = `./previewQuiz.html?name=${value}`
             console.log(link)
-            survey1 += `<div class="col-xl-3 col-lg-4 col-md-6 col-12">
+            survey1 += `<div class="col-xl-3 col-lg-4 col-md-6 col-12 ">
           <!-- card -->
           <div class="card mb-4 card-hover">
             <!-- img -->
@@ -468,7 +486,7 @@
             <div class="card-body">
               <h3 class="mb-0 fw-semi-bold"> <a href=${link} class="text-inherit"  target="_blank">${value}</a></h3>
               <p class="mb-3">Professional Web Developer</p>
-              <div class="lh-1  d-flex justify-content-between">
+              <div class="lh-1  d-flex justify-content-between mb-4">
                 <div>
                   <span class="fs-6">
                     <i class="mdi mdi-star text-warning"></i>
@@ -482,18 +500,28 @@
                   <span class="fs-6 text-muted"><span class="text-dark">3</span> Course</span>
                 </div>
               </div>
+              <div class=${value} style="display: flex;justify-content: space-evenly;align-items: center;align-content: ;"><div  id="edit" class="btn btn-primary btn-sm">Edit</div><div  id="result" class="btn btn-primary btn-sm">Result</div><div id="delete"class="btn btn-danger btn-sm ml-3" onclick="deleteSurvey()">Delete</div></div>
+
             </div>
           </div>
         </div>`
+
+        function deleteSurvey() {
+            alert("delete touched")
+            console.log("delete button touched")
+            remove(ref(db, "Survey/final"))
+              .then(() => {
+                alert("data deleted succesfully");
+                location.reload()
+              })
+              .catch((error) => {
+                alert("unsuccesfull storing : " + error)
+              })
+          }
           })
 
           let surveyItems = document.getElementById("surveyItems")
           surveyItems.innerHTML = survey1
-
-
-
-
-
 
         })
         .catch((error) => {
@@ -502,11 +530,22 @@
     }
 
     //read data from database and assign it to a json 
-   
-    window.onload = GetAllData;
+    
+
+    GetAllData();
+
+
+    
+
+    
 
 
 
+  </script>
+
+  <script>
+
+    
   </script>
 
 

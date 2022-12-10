@@ -14902,7 +14902,7 @@
         const survey = localStorage.getItem("LocalStorageSurvey")
         let name = JSON.parse(survey).title
         // let title = JSON.parse(survey).title
-        set(ref(db, "Survey/"), survey)
+        set(ref(db, "Survey/"+name), survey)
           .then(() => {
             alert("data stored succesfully")
             localStorage.clear();

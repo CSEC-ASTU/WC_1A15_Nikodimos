@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>Preskool - Basic Inputs</title>
+
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/plugins/feather/feather.css">
+  <link rel="stylesheet" href="./assets/css/poll.css">
+
+  <link rel="stylesheet" href="assets/plugins/icons/flags/flags.css">
+
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/plugins/twitter-bootstrap-wizard/form-wizard.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://unpkg.com/survey-jquery/defaultV2.min.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://unpkg.com/survey-jquery/survey.jquery.min.js"></script>
+    <script type="text/javascript" src="poll2.js"></script>
+    <!-- ... -->
+    <script type="text/javascript" src="https://unpkg.com/knockout/build/output/knockout-latest.js"></script>
+
+    <!-- SurveyJS resources -->
+    <link href="https://unpkg.com/survey-core/defaultV2.min.css" type="text/css" rel="stylesheet">
+    <script src="https://unpkg.com/survey-core/survey.core.min.js"></script>
+    <script src="https://unpkg.com/survey-knockout-ui/survey-knockout-ui.min.js"></script>
+
+    <!-- Survey Creator resources -->
+    <link href="https://unpkg.com/survey-creator-core/survey-creator-core.min.css" type="text/css" rel="stylesheet">
+    <script src="https://unpkg.com/survey-creator-core/survey-creator-core.min.js"></script>
+    <script src="https://unpkg.com/survey-creator-knockout/survey-creator-knockout.min.js"></script>
+    <!-- ... -->
+  </head>
+</head>
+
+<body>
+
+  <div class="main-wrapper">
+
+    <div class="header">
+
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <img src="assets/img/logo.png" alt="Logo">
+        </a>
+        <a href="index.html" class="logo logo-small">
+          <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+        </a>
+      </div>
+
+      <div class="menu-toggle">
+        <a href="javascript:void(0);" id="toggle_btn">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+
+      <div class="top-nav-search">
+        <form>
+          <input type="text" class="form-control" placeholder="Search here">
+          <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+
+
+      <a class="mobile_btn" id="mobile_btn">
+        <i class="fas fa-bars"></i>
+      </a>
+
+
+      <ul class="nav user-menu">
+        <li class="nav-item dropdown language-drop me-2">
+          <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
+            <img src="assets/img/icons/header-icon-01.svg" alt="">
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="javascript:;"><i class="flag flag-lr me-2"></i>English</a>
+            <a class="dropdown-item" href="javascript:;"><i class="flag flag-bl me-2"></i>Francais</a>
+            <a class="dropdown-item" href="javascript:;"><i class="flag flag-cn me-2"></i>Turkce</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown noti-dropdown me-2">
+          <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
+            <img src="assets/img/icons/header-icon-05.svg" alt="">
+          </a>
+          <div class="dropdown-menu notifications">
+            <div class="topnav-dropdown-header">
+              <span class="notification-title">Notifications</span>
+              <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+            </div>
+            <div class="noti-content">
+              <ul class="notification-list">
+                <li class="notification-message">
+                  <a href="#">
+                    <div class="media d-flex">
+                      <span class="avatar avatar-sm flex-shrink-0">
+                        <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
+                      </span>
+                      <div class="media-body flex-grow-1">
+                        <p class="noti-details"><span class="noti-title">Carlson Tech</span> has
+                          approved <span class="noti-title">your estimate</span></p>
+                        <p class="noti-time"><span class="notification-time">4 mins ago</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="notification-message">
+                  <a href="#">
+                    <div class="media d-flex">
+                      <span class="avatar avatar-sm flex-shrink-0">
+                        <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
+                      </span>
+                      <div class="media-body flex-grow-1">
+                        <p class="noti-details"><span class="noti-title">International Software
+                            Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
+                        <p class="noti-time"><span class="notification-time">6 mins ago</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="notification-message">
+                  <a href="#">
+                    <div class="media d-flex">
+                      <span class="avatar avatar-sm flex-shrink-0">
+                        <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
+                      </span>
+                      <div class="media-body flex-grow-1">
+                        <p class="noti-details"><span class="noti-title">John Hendry</span> sent
+                          a cancellation request <span class="noti-title">Apple iPhone
+                            XR</span></p>
+                        <p class="noti-time"><span class="notification-time">8 mins ago</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="notification-message">
+                  <a href="#">
+                    <div class="media d-flex">
+                      <span class="avatar avatar-sm flex-shrink-0">
+                        <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
+                      </span>
+                      <div class="media-body flex-grow-1">
+                        <p class="noti-details"><span class="noti-title">Mercury Software
+                            Inc</span> added a new product <span class="noti-title">Apple
+                            MacBook Pro</span></p>
+                        <p class="noti-time"><span class="notification-time">12 mins ago</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="topnav-dropdown-footer">
+              <a href="#">View all Notifications</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item zoom-screen me-2">
+          <a href="#" class="nav-link header-nav-list">
+            <img src="assets/img/icons/header-icon-04.svg" alt="">
+          </a>
+        </li>
+
+        <li class="nav-item dropdown has-arrow new-user-menus">
+          <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+            <span class="user-img">
+              <img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Soeng Souy">
+              <div class="user-text">
+                <h6>Soeng Souy</h6>
+                <p class="text-muted mb-0">Administrator</p>
+              </div>
+            </span>
+          </a>
+          <div class="dropdown-menu">
+            <div class="user-header">
+              <div class="avatar avatar-sm">
+                <img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+              </div>
+              <div class="user-text">
+                <h6>Soeng Souy</h6>
+                <p class="text-muted mb-0">Administrator</p>
+              </div>
+            </div>
+            <a class="dropdown-item" href="profile.html">My Profile</a>
+            <a class="dropdown-item" href="inbox.html">Inbox</a>
+            <a class="dropdown-item" href="login.html">Logout</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+          <ul>
+            <li class="menu-title">
+              <span>Main Menu</span>
+            </li>
+            <li>
+              <a href="blank-page.html"><i class="feather-grid"></i> <span>Dashboard</span></a>
+            </li>
+            <li class="submenu">
+              <a href="#"><i class="fas fa-edit"></i> <span> Survey</span> <span class="menu-arrow"></span></a>
+              <ul>
+                <li><a href="index.html">Create Survey</a></li>
+                <li><a href="teacher-dashboard.html">Response</a></li>
+
+              </ul>
+            </li>
+            <li class="submenu">
+              <a href="#"><i class="fas fa-question-circle"></i> <span> Quiz</span> <span class="menu-arrow"></span></a>
+              <ul>
+                <li><a href="students.html">Create Quiz</a></li>
+                <li><a href="student-details.html">Response</a></li>
+              </ul>
+            </li>
+            <li class="submenu">
+              <a href="#"><i class="fas fa-poll"></i> <span> Poll</span> <span class="menu-arrow"></span></a>
+              <ul>
+                <li><a href="teachers.html">Create Poll</a></li>
+                <li><a href="teacher-details.html">Response</a></li>
+
+              </ul>
+            </li>
+            <li>
+              <a href="blank-page.html"><i class="fas fas fa-sign-out-alt"></i> <span>Log out</span></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-wrapper">
+      <div class="content container-fluid">
+
+        <div class="page-header">
+          <div class="row">
+            <div class="col">
+              <!-- <h3 class="page-title">Create a Poll</h3> -->
+              <!-- <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active">Components</li>
+                                <body> -->
+
+              <!DOCTYPE html>
+              <!-- Created By CodingNepal - www.codingnepalweb.com -->
+              <html lang="en">
+
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Poll UI Design | CodingNepal</title>
+                <link rel="stylesheet" href="style.css">
+              </head>
+
+              <body>
+                <div class="wrapper">
+                  <header>Poll UI Design</header>
+                  <div class="poll-area">
+                    <input type="checkbox" name="poll" id="opt-1">
+                    <input type="checkbox" name="poll" id="opt-2">
+                    <input type="checkbox" name="poll" id="opt-3">
+                    <input type="checkbox" name="poll" id="opt-4">
+                    <label for="opt-1" class="opt-1">
+                      <div class="row">
+                        <div class="column">
+                          <span class="circle"></span>
+                          <span class="text">HTML</span>
+                        </div>
+                        <span class="percent">30%</span>
+                      </div>
+                      <div class="progress" style='--w:30;'></div>
+                    </label>
+                    <label for="opt-2" class="opt-2">
+                      <div class="row">
+                        <div class="column">
+                          <span class="circle"></span>
+                          <span class="text">Java</span>
+                        </div>
+                        <span class="percent">20%</span>
+                      </div>
+                      <div class="progress" style='--w:20;'></div>
+                    </label>
+                    <label for="opt-3" class="opt-3">
+                      <div class="row">
+                        <div class="column">
+                          <span class="circle"></span>
+                          <span class="text">Python</span>
+                        </div>
+                        <span class="percent">40%</span>
+                      </div>
+                      <div class="progress" style='--w:40;'></div>
+                    </label>
+                    <label for="opt-4" class="opt-4">
+                      <div class="row">
+                        <div class="column">
+                          <span class="circle"></span>
+                          <span class="text">jQuery</span>
+                        </div>
+                        <span class="percent">10%</span>
+                      </div>
+                      <div class="progress" style='--w:10;'></div>
+                    </label>
+                  </div>
+                </div>
+
+                <script src="script.js"></script>
+
+              </body>
+
+              </html>
+</body>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<!-- <footer>
+                <p>Copyright © 2022 Dreamguys.</p>
+            </footer> -->
+
+</div>
+
+</div>
+
+
+<div class="modal fade confirmModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+          <h5 class="mb-3">Confirm Save Changes</h5>
+          <button type="button" class="btn btn-dark w-md" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary w-md" data-bs-dismiss="modal" onclick="nextTab()">Save
+            changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const options = document.querySelectorAll("label");
+  for (let i = 0; i < options.length; i++) {
+    options[i].addEventListener("click", () => {
+      for (let j = 0; j < options.length; j++) {
+        if (options[j].classList.contains("selected")) {
+          options[j].classList.remove("selected");
+        }
+      }
+
+      options[i].classList.add("selected");
+      for (let k = 0; k < options.length; k++) {
+        options[k].classList.add("selectall");
+      }
+
+      let forVal = options[i].getAttribute("for");
+      let selectInput = document.querySelector("#" + forVal);
+      let getAtt = selectInput.getAttribute("type");
+      if (getAtt == "checkbox") {
+        selectInput.setAttribute("type", "radio");
+      } else if (selectInput.checked == true) {
+        options[i].classList.remove("selected");
+        selectInput.setAttribute("type", "checkbox");
+      }
+
+      let array = [];
+      for (let l = 0; l < options.length; l++) {
+        if (options[l].classList.contains("selected")) {
+          array.push(l);
+        }
+      }
+      if (array.length == 0) {
+        for (let m = 0; m < options.length; m++) {
+          options[m].removeAttribute("class");
+        }
+      }
+    });
+  }
+</script>
+<!-- <script>
+  function addcheckbox() {
+    const parent = document.getElementById("pollquestions"); // selecting parent
+
+    const child = document.createElement("input");
+    const btnchild = document.createElement('button', 'new')
+    child.setAttribute('class', 'form-control');
+    child.setAttribute('placeholder', 'Enter option');
+    child.setAttribute("style", "margin-top:10px;");
+    child.setAttribute('id', 'newtext');
+    btnchild.innerHTML = 'Delete';
+    btnchild.onclick = deletecheckbox();
+    btnchild.setAttribute('class', 'btn btn-danger btn-sm')
+    btnchild.setAttribute('style', 'margin-top:10px');
+    btnchild.setAttribute('value', 'Delete');
+
+
+
+    // creating child
+    child.innerHTML = "This is second ctftt"; // adding some content
+    parent.append(child);
+    parent.append(btnchild);
+  }
+
+  function deletecheckbox() {
+    const parent = document.getElementById("pollquestions");
+    const deleted = document.getElementById('newtextl');
+
+
+  }
+</script> -->
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/feather.min.js"></script>
+<script src="/poll2.js">
+
+</script>
+
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="assets/plugins/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="assets/plugins/twitter-bootstrap-wizard/prettify.js"></script>
+<script src="assets/plugins/twitter-bootstrap-wizard/form-wizard.js"></script>
+
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

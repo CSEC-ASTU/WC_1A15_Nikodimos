@@ -14887,7 +14887,7 @@
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    import { getDatabase, ref, set, get, child, update, remove }
+    import { getDatabase, ref, set, get, child,push, update, remove }
       from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
   
@@ -14902,12 +14902,10 @@
        console.log("trying to insert data ...")
         const survey = localStorage.getItem("LocalStorageSurvey")
         let name = JSON.parse(survey).title
-        let time = Date.now();
-        time = time.toString()
-
-        // let title = JSON.parse(survey).title
-        set(ref(db, "Survey/"+ name), survey)
-          .then(() => {
+         const surveyListRef = ref(db, "Survey");
+        const newsurveyListRef = push(surveyListRef);
+        set(newsurveyListRef, survey)
+        .then(() => {
             alert("data stored succesfully")
             localStorage.clear();
             location.reload()

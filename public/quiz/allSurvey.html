@@ -446,9 +446,11 @@
 
 
           var surveyList = []
+          var surveyKeys = []
 
           snapshot.forEach((childSnapshot) => {
             surveyList.push(childSnapshot.val())
+            surveyKeys.push(childSnapshot.key)
           })
 
           let surveyTitle = []
@@ -462,9 +464,9 @@
 
           //render the element on browser
           let survey1 = "";
-          surveyTitle.map((value) => {
+          surveyTitle.map((value,i) => {
             console.log(value)
-            let link = `./previewQuiz.html?name=${value}`
+            let link = `./previewQuiz.html?name=${surveyKeys[i]}`
             console.log(link)
             survey1 += `<div class="col-xl-3 col-lg-4 col-md-6 col-12 ">
           <!-- card -->

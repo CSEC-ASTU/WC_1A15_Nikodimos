@@ -375,19 +375,6 @@
       <!-- row -->
       <div class="row" id="surveyItems">
 
-
-        function deleteSurvey() {
-          alert("delete touched")
-          console.log("delete button touched")
-          remove(ref(db, "Survey/final"))
-            .then(() => {
-              alert("data deleted succesfully");
-              location.reload()
-            })
-            .catch((error) => {
-              alert("unsuccesfull storing : " + error)
-            })
-        }
         <!-- btn -->
         <div class="col-md-12 mt-3 text-center">
           <a href="#" class="btn btn-primary"> See All Surveys</a>
@@ -420,6 +407,8 @@
   <script src="allSurvey_files/tooltip.js"></script>
 
   <script type="module">
+
+    
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
     // TODO: Add SDKs for Firebase products that you want to use
@@ -442,19 +431,19 @@
 
     const db = getDatabase();
 
-    
+
 
     function GetAllData() {
       console.log("Getting all survey data ...")
       const dbref = ref(db)
 
 
-      
+
 
       get(child(dbref, "Survey"))
         .then((snapshot) => {
 
-          
+
 
           var surveyList = []
 
@@ -500,24 +489,11 @@
                   <span class="fs-6 text-muted"><span class="text-dark">3</span> Course</span>
                 </div>
               </div>
-              <div class=${value} style="display: flex;justify-content: space-evenly;align-items: center;align-content: ;"><div  id="edit" class="btn btn-primary btn-sm">Edit</div><div  id="result" class="btn btn-primary btn-sm">Result</div><div id="delete"class="btn btn-danger btn-sm ml-3" onclick="deleteSurvey()">Delete</div></div>
-
+              
             </div>
           </div>
         </div>`
 
-        function deleteSurvey() {
-            alert("delete touched")
-            console.log("delete button touched")
-            remove(ref(db, "Survey/final"))
-              .then(() => {
-                alert("data deleted succesfully");
-                location.reload()
-              })
-              .catch((error) => {
-                alert("unsuccesfull storing : " + error)
-              })
-          }
           })
 
           let surveyItems = document.getElementById("surveyItems")
@@ -530,23 +506,20 @@
     }
 
     //read data from database and assign it to a json 
-    
-
-    GetAllData();
 
 
-    
+    window.onload = GetAllData;
 
-    
+
+
+
+
 
 
 
   </script>
 
-  <script>
 
-    
-  </script>
 
 
 

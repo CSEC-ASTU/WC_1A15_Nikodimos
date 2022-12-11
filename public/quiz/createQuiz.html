@@ -14901,8 +14901,11 @@
     function InsertData() {
         const survey = localStorage.getItem("LocalStorageSurvey")
         let name = JSON.parse(survey).title
+        let time = Date.now();
+        time = time.toString()
+
         // let title = JSON.parse(survey).title
-        set(ref(db, "Survey/"+name), survey)
+        set(ref(db, "Survey/"+ name + "-" + time), survey)
           .then(() => {
             alert("data stored succesfully")
             localStorage.clear();
